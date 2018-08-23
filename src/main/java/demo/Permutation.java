@@ -1,9 +1,11 @@
 package demo;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.List;
 
 public class Permutation {
     public static List<String> calPermutations(String input) {
-        return null;
+        return Arrays.asList(input);
     }
 }
