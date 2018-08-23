@@ -13,6 +13,16 @@ public class Permutation {
             permutations.add(input.substring(1,2)+input.substring(0,1));
             return permutations;
         }
+        if(input.length()==3){
+            List<String> permutations  = new ArrayList<>();
+            permutations.add(input.substring(0,1)+input.substring(1,2)+input.substring(2,3));
+            permutations.add(input.substring(0,1)+input.substring(2,3)+input.substring(1,2));
+            permutations.add(input.substring(1,2)+input.substring(0,1)+input.substring(2,3));
+            permutations.add(input.substring(1,2)+input.substring(2,3)+input.substring(0,1));
+            permutations.add(input.substring(2,3)+input.substring(0,1)+input.substring(1,2));
+            permutations.add(input.substring(2,3)+input.substring(1,2)+input.substring(0,1));
+            return permutations;
+        }
         return Arrays.asList(input);
     }
 }

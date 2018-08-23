@@ -36,4 +36,5 @@ public class PermutationTest {
         //then
         assertThat(permutations,is(Arrays.asList("abc","acb","bac","bca","cab","cba")));
     }
+
 }
