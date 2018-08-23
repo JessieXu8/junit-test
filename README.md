@@ -7,3 +7,6 @@
 3. given chars is abc
    when call permutation
    then return [abc,acb,bac,bca,cab,cba]
+4. given chars is abcd
+   when call permutation
+   then return permutation's length is 24
