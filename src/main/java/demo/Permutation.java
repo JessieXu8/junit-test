@@ -15,17 +15,21 @@ public class Permutation {
         }
         if(input.length()==3){
             List<String> permutations  = new ArrayList<>();
-            List<String> tempPermutations = calPermutations(input.substring(1,3));
-            permutations.add(input.substring(0,1)+tempPermutations.get(0));
-            permutations.add(input.substring(0,1)+tempPermutations.get(1));
-            tempPermutations = calPermutations(input.substring(0,1)+input.substring(2,3));
-            permutations.add(input.substring(1,2)+tempPermutations.get(0));
-            permutations.add(input.substring(1,2)+tempPermutations.get(1));
-            tempPermutations = calPermutations(input.substring(0,2));
-            permutations.add(input.substring(2,3)+tempPermutations.get(0));
-            permutations.add(input.substring(2,3)+tempPermutations.get(1));
+            List<String> tempPermutations = calPermutations(removeOne(input,0));
+            permutations.add(input.charAt(0)+tempPermutations.get(0));
+            permutations.add(input.charAt(0)+tempPermutations.get(1));
+            tempPermutations = calPermutations(removeOne(input,1));
+            permutations.add(input.charAt(1)+tempPermutations.get(0));
+            permutations.add(input.charAt(1)+tempPermutations.get(1));
+            tempPermutations = calPermutations(removeOne(input,2));
+            permutations.add(input.charAt(2)+tempPermutations.get(0));
+            permutations.add(input.charAt(2)+tempPermutations.get(1));
             return permutations;
         }
         return Arrays.asList(input);
+    }
+
+    private static String removeOne(String input,int index) {
+        return input.substring(0,index)+input.substring(index+1);
     }
 }
