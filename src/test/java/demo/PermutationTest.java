@@ -18,4 +18,14 @@ public class PermutationTest {
         //then
         assertThat(permutations,is(Arrays.asList("a")));
     }
+    @Test
+    public void should_return_ab_ba_when_chars_is_ab(){
+        //given
+        String input = "ab";
+        //when
+        List<String> permutations = Permutation.calPermutations(input);
+        //then
+        assertThat(permutations,is(Arrays.asList("ab","ba")));
+    }
+
 }
